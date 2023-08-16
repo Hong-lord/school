@@ -1,0 +1,168 @@
+WARNING 2023-08-14 20:49:11,598 log 230 Not Found: /xadmin/
+WARNING 2023-08-14 20:49:11,598 basehttp 161 "GET /xadmin/ HTTP/1.1" 404 2434
+WARNING 2023-08-14 23:02:48,332 log 230 Not Found: /
+WARNING 2023-08-14 23:02:48,332 basehttp 161 "GET / HTTP/1.1" 404 2395
+WARNING 2023-08-14 23:02:48,335 log 230 Not Found: /
+WARNING 2023-08-14 23:02:48,335 basehttp 161 "GET / HTTP/1.1" 404 2395
+WARNING 2023-08-14 23:05:48,303 log 230 Not Found: /
+WARNING 2023-08-14 23:05:48,303 basehttp 161 "GET / HTTP/1.1" 404 2395
+WARNING 2023-08-14 23:05:48,306 log 230 Not Found: /
+WARNING 2023-08-14 23:05:48,307 basehttp 161 "GET / HTTP/1.1" 404 2395
+WARNING 2023-08-15 14:10:39,656 log 230 Not Found: /
+WARNING 2023-08-15 14:10:39,657 basehttp 161 "GET / HTTP/1.1" 404 2395
+WARNING 2023-08-15 14:10:40,275 log 230 Not Found: /favicon.ico
+WARNING 2023-08-15 14:10:40,275 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2446
+WARNING 2023-08-15 15:03:01,206 log 230 Not Found: /admin/xadmin/log/
+WARNING 2023-08-15 15:03:01,206 basehttp 161 "GET /admin/xadmin/log/ HTTP/1.1" 404 2465
+WARNING 2023-08-16 13:58:48,881 log 230 Not Found: /
+WARNING 2023-08-16 13:58:48,891 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 13:58:48,895 log 230 Not Found: /
+WARNING 2023-08-16 13:58:48,895 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 13:58:49,489 log 230 Not Found: /favicon.ico
+WARNING 2023-08-16 13:58:49,489 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2447
+WARNING 2023-08-16 13:58:49,581 log 230 Not Found: /favicon.ico
+WARNING 2023-08-16 13:58:49,581 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2447
+WARNING 2023-08-16 14:07:59,731 log 230 Not Found: /
+WARNING 2023-08-16 14:07:59,731 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 14:07:59,734 log 230 Not Found: /
+WARNING 2023-08-16 14:07:59,734 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 14:11:20,293 log 230 Not Found: /xadmin/admin
+WARNING 2023-08-16 14:11:20,294 basehttp 161 "GET /xadmin/admin HTTP/1.1" 404 6456
+WARNING 2023-08-16 14:11:25,923 log 230 Not Found: /xadmin/xadmin
+WARNING 2023-08-16 14:11:25,923 basehttp 161 "GET /xadmin/xadmin HTTP/1.1" 404 6459
+WARNING 2023-08-16 14:11:28,640 log 230 Not Found: /xadmin/xadmin
+WARNING 2023-08-16 14:11:28,641 basehttp 161 "GET /xadmin/xadmin HTTP/1.1" 404 6459
+WARNING 2023-08-16 14:27:28,539 log 230 Not Found: /
+WARNING 2023-08-16 14:27:28,540 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 14:27:29,031 log 230 Not Found: /
+WARNING 2023-08-16 14:27:29,031 basehttp 161 "GET / HTTP/1.1" 404 2396
+WARNING 2023-08-16 14:30:07,591 log 230 Not Found: /xadmin/home/banner/
+WARNING 2023-08-16 14:30:07,593 basehttp 161 "GET /xadmin/home/banner/ HTTP/1.1" 404 6477
+ERROR 2023-08-16 14:48:19,433 log 230 Internal Server Error: /xadmin/home/banner/4/update/
+Traceback (most recent call last):
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\sites.py", line 301, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\sites.py", line 209, in inner
+    return view(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 283, in view
+    return handler(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 281, in get
+    return self.get_response()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 501, in get_response
+    context = self.get_context()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 481, in get_context
+    'title': _('Change %s') % force_text(self.org_obj),
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\encoding.py", line 115, in force_text
+    return force_str(s, encoding, strings_only, errors)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\encoding.py", line 64, in force_str
+    s = str(s)
+TypeError: __str__ returned non-string (type Banner)
+ERROR 2023-08-16 14:48:19,436 basehttp 161 "GET /xadmin/home/banner/4/update/ HTTP/1.1" 500 192245
+ERROR 2023-08-16 14:48:22,695 log 230 Internal Server Error: /xadmin/home/banner/3/update/
+Traceback (most recent call last):
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\sites.py", line 301, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\sites.py", line 209, in inner
+    return view(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 283, in view
+    return handler(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 281, in get
+    return self.get_response()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 501, in get_response
+    context = self.get_context()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 81, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 64, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 50, in filter_chain
+    return func()
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 63, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\base.py", line 75, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\xadmin\views\edit.py", line 481, in get_context
+    'title': _('Change %s') % force_text(self.org_obj),
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\encoding.py", line 115, in force_text
+    return force_str(s, encoding, strings_only, errors)
+  File "E:\Virtualenvs\Virtualenvs\luffy\lib\site-packages\django\utils\encoding.py", line 64, in force_str
+    s = str(s)
+TypeError: __str__ returned non-string (type Banner)
+ERROR 2023-08-16 14:48:22,700 basehttp 161 "GET /xadmin/home/banner/3/update/ HTTP/1.1" 500 192245
+WARNING 2023-08-16 15:53:13,989 log 230 Not Found: /media/banner/banner2_TgpRXCi.png
+WARNING 2023-08-16 15:53:14,834 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
+WARNING 2023-08-16 15:53:16,517 log 230 Not Found: /media/banner/banner2_TgpRXCi.png
+WARNING 2023-08-16 15:53:16,517 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
+WARNING 2023-08-16 15:53:24,450 log 230 Not Found: /media/banner/banner2_TgpRXCi.png
+WARNING 2023-08-16 15:53:24,451 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
+WARNING 2023-08-16 15:53:37,240 log 230 Not Found: /media/banner/banner2_TgpRXCi.png
+WARNING 2023-08-16 15:53:37,240 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
