@@ -31,5 +31,5 @@ new Vue({
 
 
 // 配置
-// Vue.prototype.$axios = axios;
+Vue.prototype.$axios = axios;
 Vue.prototype.$cookies = cookies;

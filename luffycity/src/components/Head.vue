@@ -27,10 +27,12 @@
 
 
                   </el-row>
-                    <span><el-button type="success" round>登录</el-button></span>
+                    <span @click="put_login"><el-button type="success" round>登录</el-button></span>
                     <span class="line">|</span>
-                    <span><el-button type="warning" round>注册</el-button></span>
+                    <span @click="put_register"><el-button type="warning" round>注册</el-button></span>
                 </div>
+               <Login v-if="is_login" @close="close_login" @go="put_register" @success="success_login" />
+                <Register v-if="is_register" @close="close_register" @go="put_login" @success="success_register" />
     		</div>
         </div>
     </div>
@@ -38,12 +40,19 @@
 </template>
 
 <script>
-
+import Login from "./Login";
+import Register from "./Register";
     export default {
         name: "Header",
+        components: {Login,Register},
         data() {
             return {
                 url_path: sessionStorage.url_path || '/',
+                token: '',
+                username: '',
+                user_id: '',
+                is_login: false,
+                is_register: false,
             }
         },
         methods: {
@@ -54,11 +63,49 @@
                 }
                 sessionStorage.url_path = url_path;
             },
+          put_login() {
+                this.is_login = true;
+                this.is_register = false;
+            },
+            put_register() {
+                this.is_login = false;
+                this.is_register = true;
+            },
+            close_login() {
+                this.is_login = false;
+            },
+            close_register() {
+                this.is_register = false;
+            },
+            success_login(data) {
+                this.is_login = false;
+                this.username = data.username;
+                this.token = data.token;
+                this.user_id = data.user_id;
+            },
+            logout() {
+                this.token = '';
+                this.username = '';
+                this.user_id = '';
+                this.$cookies.remove('username');
+                this.$cookies.remove('token');
+                this.$cookies.remove('user_id');
+            },
+            success_register () {
+                this.is_register = false;
+                this.is_login = true;
+            }
         },
         created() {
             sessionStorage.url_path = this.$route.path;
             this.url_path = this.$route.path;
-        }
+            // 检测cookies，查看登录状态
+            this.username = this.$cookies.get('username');
+            this.token = this.$cookies.get('token');
+            this.user_id = this.$cookies.get('user_id');
+        },
+
+
     }
 </script>
 
