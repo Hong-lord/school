@@ -166,3 +166,7 @@ WARNING 2023-08-16 15:53:24,450 log 230 Not Found: /media/banner/banner2_TgpRXCi
 WARNING 2023-08-16 15:53:24,451 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
 WARNING 2023-08-16 15:53:37,240 log 230 Not Found: /media/banner/banner2_TgpRXCi.png
 WARNING 2023-08-16 15:53:37,240 basehttp 161 "GET /media/banner/banner2_TgpRXCi.png HTTP/1.1" 404 2716
+WARNING 2023-08-17 14:57:49,904 log 230 Not Found: /user/mobile/
+WARNING 2023-08-17 14:57:49,914 basehttp 161 "POST /user/mobile/ HTTP/1.1" 404 2522
+WARNING 2023-08-17 14:57:51,981 log 230 Not Found: /user/register/
+WARNING 2023-08-17 14:57:51,982 basehttp 161 "POST /user/register/ HTTP/1.1" 404 2528
